@@ -1,1 +1,5 @@
-prototype(TechDivision.Card:Augmenter.CardLayoutAugmenter) < prototype(Neos.Fusion:Augmenter)
+prototype(TechDivision.Card:Augmenter.CardLayoutAugmenter) < prototype(Neos.Fusion:Augmenter) {
+    class = Neos.Fusion:Join {
+        @glue = ' '
+    }
+}
