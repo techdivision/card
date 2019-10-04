@@ -1,4 +1,4 @@
-prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integration.Card) {
+prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integration.DocumentCard) {
 
     @context.linkedNode = ${q(node).property('referenceTarget')}
 
