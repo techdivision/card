@@ -4,26 +4,26 @@ prototype(TechDivision.Card:Integration.Card) < prototype(Neos.Neos:ContentCompo
     cardLayout = Neos.Fusion:Case {
         defaultCardLayout {
             condition = ${true}
-            renderer = ${q(linkedNode).property('cardLayout') ? q(linkedNode).property('cardLayout') : ''}
+            renderer = ${q(node).property('cardLayout') ? q(node).property('cardLayout') : ''}
         }
     }
 
     imageUri = Neos.Fusion:Case {
         asset {
-            condition = ${q(linkedNode).property('cardImage')}
+            condition = ${q(node).property('cardImage')}
             renderer = Neos.Neos:ImageUri {
-                asset = ${q(linkedNode).property('cardImage')}
+                asset = ${q(node).property('cardImage')}
             }
         }
     }
 
     targetUri = Neos.Neos:NodeUri {
-        node = ${linkedNode}
+        node = ${node}
     }
 
-    buttonText = ${q(linkedNode).property('cardButtonText')}
+    buttonText = ${q(node).property('cardButtonText')}
 
-    supportingText = ${q(linkedNode).property('cardSupportingText')}
+    supportingText = ${q(node).property('cardSupportingText')}
 
     supportingTextDisplayCondition = ${documentNode.context.inBackend || this.supportingText}
 
@@ -31,18 +31,18 @@ prototype(TechDivision.Card:Integration.Card) < prototype(Neos.Neos:ContentCompo
 
     cardTitle = Neos.Fusion:Case {
         cardTitle {
-            condition = ${q(linkedNode).property('cardTitle')}
-            renderer = ${q(linkedNode).property('cardTitle')}
+            condition = ${q(node).property('cardTitle')}
+            renderer = ${q(node).property('cardTitle')}
             @position = 'start'
         }
         fallbackNodeTitle {
-            condition = ${q(linkedNode).property('title')}
-            renderer = ${q(linkedNode).property('title')}
+            condition = ${q(node).property('title')}
+            renderer = ${q(node).property('title')}
             @position = 'end'
         }
     }
 
-    secondaryText = ${q(linkedNode).property('cardSecondaryText')}
+    secondaryText = ${q(node).property('cardSecondaryText')}
 
     renderer = afx`
         <TechDivision.Card:Augmenter.CardLayoutAugmenter>
