@@ -1,7 +1,6 @@
 # add CardMixin to Neos Default Page
 # feel free to add to your own NodeTypes or remove it from Neos.NodeTypes:Page
-#Neos.NodeTypes:Page:
-'Neos.Demo:Document.Page':
+'Neos.NodeTypes:Page':
   superTypes:
     'TechDivision.Card:CardMixin': true
     'TechDivision.Card:Constraint.Card.Document': true

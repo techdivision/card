@@ -6,6 +6,10 @@
   "license": [
     "GPL-3.0-or-later"
   ],
+  "require": {
+    "neos/neos": "^4.3 || ^5.0",
+    "neos/fusion-afx": "*"
+  },
   "extra": {
     "neos": {
       "package-key": "TechDivision.Card"
