@@ -1,0 +1,17 @@
+prototype(TechDivision.Card:Template.Card.TitleAboveMedia) < prototype(Neos.Fusion:Component) {
+
+    // api
+    imageUri = ''
+    targetUri = ''
+    buttonText = ''
+    linkedTitleDisplayCondition = ''
+    cardTitle = ''
+    secondaryText = ''
+
+    renderer = afx`
+        <TechDivision.Card:Atom.PrimaryTitle cardTitle={props.cardTitle} secondaryText={props.secondaryText} @if.isFalse={!props.linkedTitleDisplayCondition} />
+        <TechDivision.Card:Atom.LinkedPrimaryTitle targetUri={props.targetUri} cardTitle={props.cardTitle} secondaryText={props.secondaryText} @if.isTrue={props.linkedTitleDisplayCondition} />
+        <TechDivision.Card:Atom.Media imageUri={props.imageUri} />
+        <TechDivision.Card:Atom.Actions targetUri={props.targetUri} buttonText={props.buttonText} />
+    `
+}

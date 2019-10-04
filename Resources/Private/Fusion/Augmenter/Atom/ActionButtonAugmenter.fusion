@@ -1,0 +1,1 @@
+prototype(TechDivision.Card:Augmenter.ActionButtonAugmenter) < prototype(Neos.Fusion:Augmenter)

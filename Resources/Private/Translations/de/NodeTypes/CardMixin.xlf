@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.cardTitle" xml:space="preserve">
+                <target xml:lang="de">Titel</target>
+            </trans-unit>
+            <trans-unit id="properties.cardTitle.ui.inline.editorOptions.placeholder" xml:space="preserve">
+                <target xml:lang="de">Titel</target>
+            </trans-unit>
+            <trans-unit id="properties.cardSecondaryText" xml:space="preserve">
+                <target xml:lang="de">Zwischenüberschrift</target>
+            </trans-unit>
+            <trans-unit id="properties.cardSecondaryText.ui.inline.editorOptions.placeholder" xml:space="preserve">
+                <target xml:lang="de">Zwischenüberschrift</target>
+            </trans-unit>
+            <trans-unit id="properties.cardSupportingText" xml:space="preserve">
+                <target xml:lang="de">Text</target>
+            </trans-unit>
+            <trans-unit id="properties.cardSupportingText.ui.inline.editorOptions.placeholder" xml:space="preserve">
+                <target xml:lang="de">Text</target>
+            </trans-unit>
+            <trans-unit id="properties.cardImage" xml:space="preserve">
+                <target xml:lang="de">Bild</target>
+            </trans-unit>
+            <trans-unit id="properties.cardLayout" xml:space="preserve">
+                <target xml:lang="de">Layout</target>
+            </trans-unit>
+            <trans-unit id="properties.cardLayout.selectBoxEditor.values." xml:space="preserve">
+                <target xml:lang="de">Basis</target>
+            </trans-unit>
+            <trans-unit id="properties.cardLayout.selectBoxEditor.values.titleAboveMedia" xml:space="preserve">
+                <target xml:lang="de">Titel oberhalb des Medienelements</target>
+            </trans-unit>
+            <trans-unit id="properties.cardLayout.selectBoxEditor.values.onlyTitleAndSupportingText" xml:space="preserve">
+                <target xml:lang="de">Nur Titel und Text</target>
+            </trans-unit>
+            <trans-unit id="properties.cardButtonText" xml:space="preserve">
+                <target xml:lang="de">Text im Button</target>
+            </trans-unit>
+            <trans-unit id="properties.cardButtonText.ui.inline.editorOptions.placeholder" xml:space="preserve">
+                <target xml:lang="de">weiter</target>
+            </trans-unit>
+            <trans-unit id="tabs.card" xml:space="preserve">
+                <target xml:lang="de">Card</target>
+            </trans-unit>
+            <trans-unit id="groups.image" xml:space="preserve">
+                <target xml:lang="de">Bild</target>
+            </trans-unit>
+            <trans-unit id="groups.layout" xml:space="preserve">
+                <target xml:lang="de">Layout</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

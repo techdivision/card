@@ -1,0 +1,61 @@
+'TechDivision.Card:SocialCard':
+  superTypes:
+    'TechDivision.Card:CardMixin': true
+    'Neos.Neos:Content': true
+  label: ${String.crop(String.stripTags(q(node).property('cardTitle') + ' Social Card'), 40, '...')}
+  ui:
+    label: i18n
+    help:
+      message: i18n
+    group: 'cards'
+    icon: 'icon-square'
+    position: 'after TechDivision.Card:DocumentCard'
+    inspector:
+      tabs:
+        reference:
+          icon: 'icon-caret-square-right'
+          label: i18n
+          position: 2
+        card:
+          position: 'after reference'
+      groups:
+        reference:
+          label: i18n
+          position: 1
+          tab: reference
+  properties:
+    referenceTarget:
+      type: string
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'reference'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: FALSE
+            nodeTypes: FALSE
+    cardType:
+      type: string
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        help:
+          message: i18n
+        inspector:
+          group: 'reference'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'twitterCard':
+                label: i18n
+                icon: 'icon-twitter'
+              'openGraphCard':
+                label: i18n
+                icon: 'icon-project-diagram'
+    cardImage:
+      ui:
+        inspector:
+          group: []

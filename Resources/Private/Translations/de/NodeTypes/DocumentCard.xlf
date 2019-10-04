@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+        <file original="" product-name="TechDivision.Card" source-language="en" datatype="plaintext">
+                <body>
+                        <trans-unit id="ui.label" xml:space="preserve">
+                                <target xml:lang="de">Document Card</target>
+                        </trans-unit>
+                        <trans-unit id="ui.help.message" xml:space="preserve">
+                                <target xml:lang="de"><![CDATA[
+        Document Cards sind Referenzen zu anderen Seiten und wiederverwendbar.
+        Informationen können nur im CardMode editiert werden und nicht in der Card selbst.
+        Können benutzt werden um die Navigation innerhalb der Website zu verbessern,
+        aber auch z.B. um eigene Produkte zu verschiedenen Seiten innerhalb der Website zu verlinken.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card/Documentation/de/DocumentCard_de.png)
+]]></target>
+                        </trans-unit>
+                        <trans-unit id="properties.referenceTarget" xml:space="preserve">
+                                <target xml:lang="de">Card, die angezeigt werden soll</target>
+                        </trans-unit>
+                        <trans-unit id="tabs.reference" xml:space="preserve">
+                                <target xml:lang="de">Referenz</target>
+                        </trans-unit>
+                        <trans-unit id="groups.reference" xml:space="preserve">
+                                <target xml:lang="de">Referenz</target>
+                        </trans-unit>
+                </body>
+        </file>
+</xliff>

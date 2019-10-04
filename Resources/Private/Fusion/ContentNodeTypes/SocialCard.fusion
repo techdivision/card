@@ -1,0 +1,49 @@
+prototype(TechDivision.Card:SocialCard) < prototype(TechDivision.Card:Integration.Card) {
+
+    @context.domCrawler = ${SocialCard.getCrawler(q(node).property('referenceTarget'))}
+    @context.cardType = ${q(node).property('cardType')}
+    targetUri = ${q(node).property('referenceTarget')}
+
+    imageUri = Neos.Fusion:Case {
+        twitterCard {
+            condition = ${cardType == 'twitterCard'}
+            renderer = ${SocialCard.getTwitterCardProperty(domCrawler, 'image')}
+        }
+        openGraphCard {
+            condition = ${cardType == 'openGraphCard'}
+            renderer = ${SocialCard.getOpenGraphProperty(domCrawler, 'image')}
+        }
+    }
+
+    cardTitle = Neos.Fusion:Case {
+        twitterCard {
+            condition = ${cardType == 'twitterCard'}
+            renderer = ${SocialCard.getTwitterCardProperty(domCrawler, 'title') ? SocialCard.getTwitterCardProperty(domCrawler, 'title') : SocialCard.getTitle(domCrawler)}
+        }
+        openGraphCard {
+            condition = ${cardType == 'openGraphCard'}
+            renderer = ${SocialCard.getOpenGraphProperty(domCrawler, 'title') ? SocialCard.getOpenGraphProperty(domCrawler, 'title') : SocialCard.getTitle(domCrawler)}
+        }
+    }
+
+    supportingText = Neos.Fusion:Case {
+        twitterCard {
+            condition = ${cardType == 'twitterCard'}
+            renderer = ${SocialCard.getTwitterCardProperty(domCrawler, 'description')}
+        }
+        openGraphCard {
+            condition = ${cardType == 'openGraphCard'}
+            renderer = ${SocialCard.getOpenGraphProperty(domCrawler, 'description')}
+        }
+    }
+    @cache {
+        mode = 'cached'
+        maximumLifetime = '604800'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

@@ -1,0 +1,22 @@
+prototype(TechDivision.Card:Atom.Actions) < prototype(Neos.Fusion:Component) {
+
+    // api
+    targetUri = ''
+    buttonText = ''
+
+    displayedButtonText = ${this.buttonText ? this.buttonText : Translation.translate('TechDivision.Card:NodeTypes.CardMixin:properties.cardButtonText.ui.inline.editorOptions.placeholder') }
+    //add some trick to prevent pointer events when inline editing
+    displayedTargetUri = ${node.context.inBackend ? 'javascript:;' : this.targetUri}
+
+    renderer = afx`
+        <div @if.hasTargetUri={props.targetUri}>
+            <TechDivision.Card:Augmenter.ActionsAugmenter>
+                <div>
+                    <TechDivision.Card:Augmenter.ActionButtonAugmenter>
+                        <a href={props.displayedTargetUri} rel="noopener" >{props.displayedButtonText}</a>
+                    </TechDivision.Card:Augmenter.ActionButtonAugmenter>
+                </div>
+            </TechDivision.Card:Augmenter.ActionsAugmenter>
+        </div>
+    `
+}

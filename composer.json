@@ -1,0 +1,19 @@
+{
+  "description": "TechDivision.Card",
+  "type": "neos-package",
+  "name": "techdivision/card",
+  "keywords": ["card", "teaser", "neos", "nodetypes", "filter"],
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "extra": {
+    "neos": {
+      "package-key": "TechDivision.Card"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "TechDivision\\Card\\": "Classes/"
+    }
+  }
+}

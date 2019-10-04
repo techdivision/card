@@ -1,0 +1,19 @@
+ prototype(TechDivision.Card:Helper.Image.Figure) < prototype(Neos.Fusion:Component) {
+
+     // api
+     imageUri = ''
+     imageClass = ''
+
+     // internal
+     fallbackDummy = Neos.Fusion:ResourceUri {
+         path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
+     }
+
+     renderer = afx`
+       <TechDivision.Card:Augmenter.ImageAugmenter>
+           <div>
+               <img src={props.imageUri ? props.imageUri : props.fallbackDummy} alt="" class={props.imageClass} />
+           </div>
+       </TechDivision.Card:Augmenter.ImageAugmenter>
+   `
+}

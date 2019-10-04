@@ -1,0 +1,83 @@
+prototype(TechDivision.Card:Integration.Card) < prototype(Neos.Neos:ContentComponent) {
+
+    //api
+    cardLayout = Neos.Fusion:Case {
+        defaultCardLayout {
+            condition = ${true}
+            renderer = ${q(linkedNode).property('cardLayout') ? q(linkedNode).property('cardLayout') : ''}
+        }
+    }
+
+    imageUri = Neos.Fusion:Case {
+        asset {
+            condition = ${q(linkedNode).property('cardImage')}
+            renderer = Neos.Neos:ImageUri {
+                asset = ${q(linkedNode).property('cardImage')}
+            }
+        }
+    }
+
+    targetUri = Neos.Neos:NodeUri {
+        node = ${linkedNode}
+    }
+
+    buttonText = ${q(linkedNode).property('cardButtonText')}
+
+    supportingText = ${q(linkedNode).property('cardSupportingText')}
+
+    supportingTextDisplayCondition = ${documentNode.context.inBackend || this.supportingText}
+
+    linkedTitleDisplayCondition = ${!documentNode.context.inBackend && this.targetUri}
+
+    cardTitle = Neos.Fusion:Case {
+        cardTitle {
+            condition = ${q(linkedNode).property('cardTitle')}
+            renderer = ${q(linkedNode).property('cardTitle')}
+            @position = 'start'
+        }
+        fallbackNodeTitle {
+            condition = ${q(linkedNode).property('title')}
+            renderer = ${q(linkedNode).property('title')}
+            @position = 'end'
+        }
+    }
+
+    secondaryText = ${q(linkedNode).property('cardSecondaryText')}
+
+    renderer = afx`
+        <TechDivision.Card:Augmenter.CardLayoutAugmenter>
+            <div @if.condition={props.cardLayout == ''}>
+                <TechDivision.Card:Template.Card.Basic
+                        imageUri={props.imageUri}
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+            <div @if.condition={props.cardLayout == 'onlyTitleAndSupportingText'}>
+                <TechDivision.Card:Template.Card.OnlyTitleAndSupportingText
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+            <div @if.condition={props.cardLayout == 'titleAboveMedia'}>
+                <TechDivision.Card:Template.Card.TitleAboveMedia
+                        imageUri={props.imageUri}
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+        </TechDivision.Card:Augmenter.CardLayoutAugmenter>
+    `
+}

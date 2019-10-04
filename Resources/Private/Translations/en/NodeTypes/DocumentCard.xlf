@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+        <file original="" product-name="TechDivision.Card" source-language="en" datatype="plaintext">
+                <body>
+                        <trans-unit id="ui.label" xml:space="preserve">
+                                <source>Document Card</source>
+                        </trans-unit>
+                        <trans-unit id="ui.help.message" xml:space="preserve">
+                                <source><![CDATA[
+        Document Cards are basically references to other pages and are highly reusable.
+        You cannot edit information here, but in the document itself.
+        This can be easily used to improve in-site-navigation
+        by putting document cards that introduce your product
+        and link to it on different places within your website - but keep your data centralized.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card/Documentation/en/DocumentCard_en.png)
+]]></source>
+                        </trans-unit>
+                        <trans-unit id="properties.referenceTarget" xml:space="preserve">
+                                <source>Card to be shown</source>
+                        </trans-unit>
+                        <trans-unit id="tabs.reference" xml:space="preserve">
+                                <source>Reference</source>
+                        </trans-unit>
+                        <trans-unit id="groups.reference" xml:space="preserve">
+                                <source>Reference</source>
+                        </trans-unit>
+                </body>
+        </file>
+</xliff>

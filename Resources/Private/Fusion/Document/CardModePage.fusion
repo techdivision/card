@@ -1,0 +1,45 @@
+prototype(TechDivision.Card:CardModePage) < prototype(Neos.Neos:Page) {
+
+    head.stylesheets.cardModeStylesheet = TechDivision.Card:Atom.Stylesheet {
+        stylesheet = Neos.Fusion:ResourceUri {
+            path = 'resource://TechDivision.Card/Public/Styles/CardMode.css'
+        }
+    }
+
+    body >
+    body = Neos.Fusion:Component {
+
+        headlineEditMode = ${Translation.translate('TechDivision.Card:Main:cardMode.headline.edit')}
+        headlinePreviewMode = ${Translation.translate('TechDivision.Card:Main:cardMode.headline.preview')}
+
+        targetUri = Neos.Neos:NodeUri {
+            node = ${node}
+        }
+
+        renderer = afx`
+            <div class="card-mode--container">
+                <h1 class="card-mode--headline">{props.headlineEditMode}</h1>
+                <div class="card--editable">
+                    <TechDivision.Card:Integration.EditableCard targetUri={props.targetUri} />
+                </div>
+                <h1 class="card-mode--headline">{props.headlinePreviewMode}</h1>
+                <div class="card--preview">
+                    <div class="card--width1">
+                        <TechDivision.Card:Integration.Card />
+                    </div>
+                    <div class="card--width2">
+                        <TechDivision.Card:Integration.Card />
+                    </div>
+                    <div class="card--width3">
+                        <TechDivision.Card:Integration.Card />
+                    </div>
+                    <div class="card--width4">
+                        <TechDivision.Card:Integration.Card />
+                    </div>
+                </div>
+            </div>
+        `
+    }
+}
+
+cardMode = TechDivision.Card:CardModePage

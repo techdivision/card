@@ -1,0 +1,16 @@
+prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integration.Card) {
+
+    @context.linkedNode = ${q(node).property('referenceTarget')}
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(linkedNode)}
+        }
+    }
+}
+

@@ -1,0 +1,1 @@
+prototype(TechDivision.Card:Augmenter.IconAugmenter) < prototype(Neos.Fusion:Augmenter)

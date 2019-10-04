@@ -1,0 +1,34 @@
+'TechDivision.Card:ContentCard':
+  superTypes:
+    'TechDivision.Card:CardMixin': true
+    'Neos.Neos:Content': true
+  label: ${String.crop(String.stripTags(q(node).property('cardTitle') + ' Content Card'), 40, '...')}
+  ui:
+    label: i18n
+    help:
+      message: i18n
+    group: 'cards'
+    icon: 'icon-square'
+    position: 'start 100'
+    inspector:
+      tabs:
+        card:
+          position: 1
+      groups:
+        button:
+          label: i18n
+          icon: 'icon-arrow-alt-circle-right'
+          position: 30
+          tab: card
+  properties:
+    cardLink:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: button
+          position: 1
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

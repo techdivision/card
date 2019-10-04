@@ -1,0 +1,24 @@
+Neos:
+  Fusion:
+    defaultContext:
+      'SocialCard': 'TechDivision\Card\Eel\SocialCardHelper'
+  Neos:
+    nodeTypes:
+      groups:
+        cards:
+          position: 'after general'
+          label: 'Card'
+    userInterface:
+      editPreviewModes:
+        cardMode:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: 'cardMode'
+          title: 'Card Mode'
+      translation:
+        autoInclude:
+          TechDivision.Card:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        TechDivision.Card: true

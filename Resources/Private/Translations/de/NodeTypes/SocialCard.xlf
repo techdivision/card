@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+        <file original="" product-name="TechDivision.Card" source-language="en" datatype="plaintext">
+                <body>
+                        <trans-unit id="ui.label" xml:space="preserve">
+                                <target xml:lang="de">Social Card</target>
+                        </trans-unit>
+                        <trans-unit id="ui.help.message" xml:space="preserve">
+                                <target xml:lang="de"><![CDATA[
+        Social Cards sind Referenzen zu anderen Seiten, die opengraph oder twittercard Meta-Eigenschaften aufweisen.
+        Die angezeigten Informationen können nicht beeinflusst werden.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card/Documentation/de/SocialCard_de.png)
+                                ]]></target>
+                        </trans-unit>
+                        <trans-unit id="properties.referenceTarget" xml:space="preserve">
+                                <target xml:lang="de">Seite, aus der Informationen gelesen werden</target>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType" xml:space="preserve">
+                                <target xml:lang="de">Card Typ</target>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.selectBoxEditor.values.twitterCard" xml:space="preserve">
+                                <target xml:lang="de">Twitter Card</target>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.selectBoxEditor.values.openGraphCard" xml:space="preserve">
+                                <target xml:lang="de">Open Graph Card</target>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.ui.help.message" xml:space="preserve">
+                                <target xml:lang="de">Art der Meta tags, die gelesen werden sollen</target>
+                        </trans-unit>
+                        <trans-unit id="tabs.reference" xml:space="preserve">
+                                <target xml:lang="de">Referenz</target>
+                        </trans-unit>
+                        <trans-unit id="groups.reference" xml:space="preserve">
+                                <target xml:lang="de">Referenz</target>
+                        </trans-unit>
+                </body>
+        </file>
+</xliff>

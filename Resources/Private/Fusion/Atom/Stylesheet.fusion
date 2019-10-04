@@ -1,0 +1,13 @@
+prototype(TechDivision.Card:Atom.Stylesheet) < prototype(Neos.Fusion:Component) {
+
+    //api
+    stylesheet = ''
+
+    media = Neos.Fusion:Value {
+        value = 'all'
+    }
+
+    renderer = afx`
+        <link rel="stylesheet" href={props.stylesheet} media={props.media} />
+    `
+}

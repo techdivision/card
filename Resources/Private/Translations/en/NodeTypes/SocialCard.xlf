@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+        <file original="" product-name="TechDivision.Card" source-language="en" datatype="plaintext">
+                <body>
+                        <trans-unit id="ui.label" xml:space="preserve">
+                                <source>Social Card</source>
+                        </trans-unit>
+                        <trans-unit id="ui.help.message" xml:space="preserve">
+                                <source><![CDATA[
+        Social Cards are basically references to other pages that use opengraph or twittercard meta properties.
+        You cannot alter the displayed information.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card/Documentation/en/SocialCard_en.png)
+]]></source>
+                        </trans-unit>
+                        <trans-unit id="properties.referenceTarget" xml:space="preserve">
+                                <source>Site to be shown</source>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType" xml:space="preserve">
+                                <source>Card type</source>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.selectBoxEditor.values.twitterCard" xml:space="preserve">
+                                <source>Twitter Card</source>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.selectBoxEditor.values.openGraphCard" xml:space="preserve">
+                                <source>Open Graph Card</source>
+                        </trans-unit>
+                        <trans-unit id="properties.cardType.ui.help.message" xml:space="preserve">
+                                <source>Type of meta tags who will be shown</source>
+                        </trans-unit>
+                        <trans-unit id="tabs.reference" xml:space="preserve">
+                                <source>Reference</source>
+                        </trans-unit>
+                        <trans-unit id="groups.reference" xml:space="preserve">
+                                <source>Reference</source>
+                        </trans-unit>
+                </body>
+        </file>
+</xliff>

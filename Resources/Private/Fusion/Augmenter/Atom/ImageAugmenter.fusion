@@ -1,0 +1,1 @@
+prototype(TechDivision.Card:Augmenter.ImageAugmenter) < prototype(Neos.Fusion:Augmenter)

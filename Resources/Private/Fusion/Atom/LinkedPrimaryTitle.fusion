@@ -1,0 +1,16 @@
+prototype(TechDivision.Card:Atom.LinkedPrimaryTitle) < prototype(Neos.Fusion:Component) {
+
+    // api
+    cardTitle = ''
+    secondaryText = ''
+    targetUri = ''
+
+    renderer = afx`
+        <TechDivision.Card:Augmenter.PrimaryTitleAugmenter>
+            <h3>
+                <a href={props.targetUri}>{props.cardTitle}</a>
+            </h3>
+            {props.secondaryText}
+        </TechDivision.Card:Augmenter.PrimaryTitleAugmenter>
+    `
+}

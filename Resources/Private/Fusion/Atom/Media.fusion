@@ -1,0 +1,9 @@
+prototype(TechDivision.Card:Atom.Media) < prototype(Neos.Fusion:Component) {
+
+    // api
+    imageUri = ''
+
+    renderer = afx`
+        <TechDivision.Card:Helper.Image.Figure imageUri={props.imageUri} />
+    `
+}

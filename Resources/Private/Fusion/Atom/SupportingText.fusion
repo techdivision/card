@@ -1,0 +1,11 @@
+prototype(TechDivision.Card:Atom.SupportingText) < prototype(Neos.Fusion:Component) {
+
+    // api
+    supportingText = ''
+
+    renderer = afx`
+        <TechDivision.Card:Augmenter.SupportingTextAugmenter>
+            <div>{props.supportingText}</div>
+        </TechDivision.Card:Augmenter.SupportingTextAugmenter>
+    `
+}
