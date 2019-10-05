@@ -1,7 +1,7 @@
 {
-  "description": "TechDivision.Card",
-  "type": "neos-package",
   "name": "techdivision/card",
+  "description": "Card / Teaser NodeTypes for Neos CMS - Content Cards (edit in-place), Document Cards (reference to a document) and Social Cards (links to external websites)",
+  "type": "neos-package",
   "keywords": ["card", "teaser", "neos", "nodetypes", "filter"],
   "license": [
     "GPL-3.0-or-later"
