@@ -10,7 +10,7 @@ prototype(TechDivision.Card:Atom.LinkedPrimaryTitle) < prototype(Neos.Fusion:Com
             <h3>
                 <a href={props.targetUri}>{props.cardTitle}</a>
             </h3>
-            {props.secondaryText}
+            <div>{props.secondaryText}</div>
         </TechDivision.Card:Augmenter.PrimaryTitleAugmenter>
     `
 }
