@@ -9,7 +9,7 @@ prototype(TechDivision.Card:Atom.PrimaryTitle) < prototype(Neos.Fusion:Component
             <h3>
                 {props.cardTitle}
             </h3>
-            {props.secondaryText}
+            <div>{props.secondaryText}</div>
         </TechDivision.Card:Augmenter.PrimaryTitleAugmenter>
     `
 }
