@@ -8,8 +8,6 @@ use Neos\Flow\Annotations as Flow;
 use Neos\Eel\ProtectedContextAwareInterface;
 use Neos\Flow\Http\Client\Browser;
 use Neos\Flow\Http\Client\CurlEngine;
-use Neos\Flow\Http\Request;
-use Neos\Flow\Http\Uri;
 use Symfony\Component\DomCrawler\Crawler;
 
 
@@ -59,9 +57,7 @@ class SocialCardHelper implements ProtectedContextAwareInterface
             throw new WrongUriException($externalUri . ' is not a valid URI');
         }
 
-        $uri = new Uri($externalUri);
-        $request = Request::create($uri, "GET");
-        $this->browser->sendRequest($request);
+        $this->browser->request($externalUri);
         return $this->browser->getCrawler();
     }
 
