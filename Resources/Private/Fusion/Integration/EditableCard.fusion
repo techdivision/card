@@ -1,22 +1,4 @@
-prototype(TechDivision.Card:Integration.EditableCard) < prototype(Neos.Neos:ContentComponent) {
-
-    //api
-    cardLayout = Neos.Fusion:Case {
-        defaultCardLayout {
-            @position = 'end'
-            condition = ${true}
-            renderer = ${q(node).property('cardLayout') ? q(node).property('cardLayout') : ''}
-        }
-    }
-
-    imageUri = Neos.Fusion:Case {
-        asset {
-            condition = ${q(node).property('cardImage')}
-            renderer = Neos.Neos:ImageUri {
-                asset = ${q(node).property('cardImage')}
-            }
-        }
-    }
+prototype(TechDivision.Card:Integration.EditableCard) < prototype(TechDivision.Card:Integration.Card) {
 
     targetUri = ''
 
@@ -27,10 +9,6 @@ prototype(TechDivision.Card:Integration.EditableCard) < prototype(Neos.Neos:Cont
     supportingText = Neos.Neos:Editable {
         property = 'cardSupportingText'
     }
-
-    supportingTextDisplayCondition = ${documentNode.context.inBackend || this.supportingText}
-
-    linkedTitleDisplayCondition = ${!documentNode.context.inBackend && this.targetUri}
 
     editableTitle = Neos.Neos:Editable {
         property = 'cardTitle'
