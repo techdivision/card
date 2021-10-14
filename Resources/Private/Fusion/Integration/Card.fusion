@@ -18,7 +18,7 @@ prototype(TechDivision.Card:Integration.Card) < prototype(Neos.Neos:ContentCompo
     }
 
     targetUri = Neos.Neos:NodeUri {
-        node = ${node}
+        node = ${baseNode}
     }
 
     buttonText = ${q(baseNode).property('cardButtonText')}
