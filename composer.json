@@ -8,6 +8,7 @@
   ],
   "require": {
     "neos/neos": "^4.3 || ^5.0 || ^7.0",
+    "symfony/css-selector": "^5.3",
     "neos/fusion-afx": "*"
   },
   "extra": {
