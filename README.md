@@ -66,7 +66,7 @@ There is not much to configure, as TechDivision.Card runs out of the box. A few 
 
 ### NodeTypes Diagramm
 This is an overview over the NodeTypes and how they work together:
-![NodeTypes Diagramm](https://github.com/techdivision/cards/tree/master/Resources/Public/Documentation/diagramm/NodeType-Diagramm.jpg)
+![NodeTypes Diagramm](https://github.com/techdivision/card-documentation-assets/raw/master/assets/card/NodeTypeDiagramm.jpg)
 
 #### Adding/Removing the CardMixin
 By default, we add the Mixin to `Neos.NodeTypes:Page` - so that you can start working.  
