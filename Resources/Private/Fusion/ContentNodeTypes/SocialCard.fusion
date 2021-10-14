@@ -1,7 +1,9 @@
 prototype(TechDivision.Card:SocialCard) < prototype(TechDivision.Card:Integration.Card) {
 
+    @context.baseNode = ${node}
     @context.domCrawler = ${SocialCard.getCrawler(q(node).property('referenceTarget'))}
     @context.cardType = ${q(node).property('cardType')}
+    
     targetUri = ${q(node).property('referenceTarget')}
 
     imageUri = Neos.Fusion:Case {
@@ -36,6 +38,7 @@ prototype(TechDivision.Card:SocialCard) < prototype(TechDivision.Card:Integratio
             renderer = ${SocialCard.getOpenGraphProperty(domCrawler, 'description')}
         }
     }
+
     @cache {
         mode = 'cached'
         maximumLifetime = '604800'

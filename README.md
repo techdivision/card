@@ -64,6 +64,10 @@ or run `composer require techdivision/card`.
 ### Configuration
 There is not much to configure, as TechDivision.Card runs out of the box. A few options are:
 
+### NodeTypes Diagramm
+This is an overview over the NodeTypes and how they work together:
+![NodeTypes Diagramm](https://github.com/techdivision/cards/tree/master/Resources/Public/Documentation/diagramm/NodeType-Diagramm.jpg)
+
 #### Adding/Removing the CardMixin
 By default, we add the Mixin to `Neos.NodeTypes:Page` - so that you can start working.  
 If you do not want this behavior, use the following code:  

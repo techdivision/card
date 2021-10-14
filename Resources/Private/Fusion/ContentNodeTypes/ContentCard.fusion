@@ -1,5 +1,8 @@
 prototype(TechDivision.Card:ContentCard) < prototype(TechDivision.Card:Integration.EditableCard) {
-    targetUri = ${q(node).property('cardLink')}
+
+    @context.baseNode = ${node}
+    
+    targetUri = ${q(baseNode).property('cardLink')}
     targetUri.@process.convertUris = Neos.Neos:ConvertUris {
         absolute = true
     }

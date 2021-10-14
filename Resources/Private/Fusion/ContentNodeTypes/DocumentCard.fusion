@@ -1,7 +1,7 @@
-prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integration.DocumentCard) {
+prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integration.Card) {
 
-    @context.linkedNode = ${q(node).property('referenceTarget')}
-
+    @context.baseNode = ${q(node).property('referenceTarget')}
+    
     @cache {
         mode = 'cached'
         entryIdentifier {
@@ -9,7 +9,7 @@ prototype(TechDivision.Card:DocumentCard) < prototype(TechDivision.Card:Integrat
         }
         entryTags {
             1 = ${Neos.Caching.nodeTag(node)}
-            2 = ${Neos.Caching.nodeTag(linkedNode)}
+            2 = ${Neos.Caching.nodeTag(baseNode)}
         }
     }
 }
