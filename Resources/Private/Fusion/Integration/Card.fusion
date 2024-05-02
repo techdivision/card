@@ -1,6 +1,8 @@
 prototype(TechDivision.Card:Integration.Card) < prototype(Neos.Neos:ContentComponent) {
 
     //api
+    @context.baseNode = ${this.node}
+
     cardLayout = Neos.Fusion:Case {
         defaultCardLayout {
             condition = ${true}
